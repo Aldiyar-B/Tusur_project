@@ -1,0 +1,74 @@
+.pp {
+	position: fixed;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	box-sizing: border-box;
+	padding: 90px 50px 90px;
+	overflow-y: auto;
+	z-index: 110;
+	//display: none;
+	//	background-color: @gray;
+
+	@supports (backdrop-filter: blur(25px)) {
+		background-color: rgba(0, 0, 0, 0.4);
+		backdrop-filter: blur(25px);
+	}
+
+	&__container {
+		box-sizing: border-box;
+		max-width: 1210px;
+		width: 100%;
+		margin: auto;
+		background-color: @gray;
+		background-image: url(../assets/images/noise.png);
+		background-repeat: repeat;
+		background-position: 0 0;
+		background-size: auto;
+	}
+
+	&__title {
+		margin: -40px 0 0;
+		box-sizing: border-box;
+		padding: 10px 84px;
+		background-color: black;
+		font-size: 22px;
+		color: white;
+		font-family: @font2;
+		text-transform: uppercase;
+		letter-spacing: 0.44px;
+		line-height: 30px;
+		font-weight: 400;
+		max-width: 595px;
+	}
+
+	&__sticky-close {
+		position: sticky;
+		top: 0;
+	}
+
+	&__sticky-btn {
+		position: absolute;
+		right: 0;
+		top: 0;
+		box-sizing: border-box;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		width: 60px;
+		height: 60px;
+		border: none;
+		outline: none;
+		border-radius: 50%;
+		background-color: black;
+		transition: background-color 0.2s;
+
+		&:hover {
+			@media(hover:hover) {
+				background-color: @red_dark;
+			}
+
+		}
+	}
+}
