@@ -19,12 +19,31 @@
 		gap: 15px;
 	}
 
-	&__input {
+	&__select,
+	&__input,
+	&__textarea {
 		box-sizing: border-box;
+		border: none;
 		border-radius: 5px;
 		background-color: white;
+		width: 100%;
+		font-size: 16px;
 		padding: 16px 20px 16px;
+	}
+
+	&__select,
+	&__input {
 		height: 55px;
+	}
+
+	&__textarea {
+		height: 150px;
+		resize: none;
+	}
+
+	&__input {
+
+		font-weight: 16px;
 
 		//color: black;
 		&::placeholder {
@@ -32,14 +51,41 @@
 			font-size: 16px;
 			color: black;
 
-			&--w55 {
-				width: 55px;
-			}
+		}
 
-			&--w110 {
-				width: 110px;
+		&--w55 {
+			width: 55px;
+		}
 
-			}
+		&--w110 {
+			width: 110px;
+		}
+
+		&--datetime {
+
+			padding: 17px 13px 16px;
+			text-align: center;
 		}
 	}
+
+
+
+
+	&__label {
+		display: block;
+		margin-bottom: 5px;
+		font-size: 16px;
+		color: black;
+		line-height: 22px;
+
+		&--textarea {
+			font-weight: 700;
+			font-family: @font1;
+			font-size: 18px;
+			line-height: 25px;
+			color: black;
+		}
+	}
+
+
 }
