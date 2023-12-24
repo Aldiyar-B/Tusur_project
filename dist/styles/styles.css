@@ -1094,6 +1094,8 @@ img {
       -ms-flex-align: end;
           align-items: flex-end;
   gap: 60px;
+  height: 100%;
+  /* Добавьте это */
 }
 .about__block3-wrapper {
   max-width: 344px;
@@ -1130,7 +1132,9 @@ img {
   bottom: 0;
   -o-object-fit: contain;
      object-fit: contain;
-  width: calc(100%-59px);
+  width: calc(100% - 59px);
+  max-width: 100%;
+  /* Добавьте это */
 }
 @media (hover: hover) {
   .link:hover {
