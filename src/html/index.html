@@ -18,14 +18,17 @@
 					<img src="./assets/images/lenni.png" alt="" class="main-header__img">
 				</picture>
 				<p class="main-header__text">
-					для людей, горящих сердцем и делом
+					для людей, горящих сердцем и делом <br>
 					место для настоящего
 				</p>
 			</header>
 
-			<section class="offers home__offers"></section>
+			@@include('blocks/offers.html', {class: 'home__offers'})
+			<!-- <section class="offers home__offers"></section> -->
 			@@include('blocks/about.html', {class: 'home__about'})
-			<section class="upcoming home__upcoming"></section>
+			<!-- <section class="upcoming home__upcoming"></section> -->
+			@@include('events.html', {"class": "events"})
+
 			@@include('blocks/blog-listing.html', {"class": "home__listing"})
 			<!-- <section class="listing home__listing"></section> -->
 			@@include('blocks/contacts.html',{class:'home__contacts'})

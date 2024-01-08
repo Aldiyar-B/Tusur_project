@@ -527,7 +527,6 @@ img {
   width: 405px;
   max-width: 100%;
   min-width: 280px;
-  color: #1f1t1t;
 }
 .event-card__link {
   display: -webkit-box;
@@ -539,6 +538,7 @@ img {
           flex-direction: column;
   width: 100%;
   text-decoration: none;
+  color: black;
 }
 .event-card__link:active .event-card__title {
   color: #bc3324;
@@ -702,6 +702,66 @@ img {
 .pp__sticky-btn__form {
   max-width: 870px;
   margin: auto;
+}
+.offers__container {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  width: 100%;
+  max-width: 1414px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 40px;
+  padding-right: 40px;
+  margin-bottom: 200px;
+  margin-top: 100px;
+}
+.offers__title {
+  text-align: center;
+  font-family: "Lora", serif;
+  font-size: 22px;
+  font-weight: 400;
+  line-height: 30px;
+  /* 136.364% */
+  letter-spacing: 0.44px;
+  text-transform: uppercase;
+}
+.offers__buttons {
+  width: 624px;
+  margin: 0 auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin-top: 46px;
+}
+.offers__button {
+  text-align: center;
+  font-family: "Open Sans", sans-serif;
+  font-size: 16px;
+  font-weight: 600;
+  -webkit-transition: all 500ms ease;
+  transition: all 500ms ease;
+  padding: 15px 40px;
+}
+.offers__button--red {
+  background: var(--1, #BC3324);
+  color: white;
+  border: none;
+}
+.offers__button--red:hover {
+  background-color: #ac2e20;
+  -webkit-box-shadow: 0 0 0 2px #fff, 0 0 0 4px #BC3324;
+          box-shadow: 0 0 0 2px #fff, 0 0 0 4px #BC3324;
+}
+.offers__button--white {
+  border: 1px solid var(--1, #1F1E1E);
+  background-color: transparent;
+}
+.offers__button--white:hover {
+  -webkit-box-shadow: 0 0 0 2px #fff, 0 0 0 4px black;
+          box-shadow: 0 0 0 2px #fff, 0 0 0 4px black;
 }
 .article-card {
   -webkit-box-sizing: border-box;
@@ -982,7 +1042,7 @@ img {
   color: #bc3324;
 }
 .home {
-  padding: 100px 0;
+  padding: 0px 0;
 }
 .home__listing {
   margin-bottom: 95px;
@@ -1135,6 +1195,21 @@ img {
   width: calc(100% - 59px);
   max-width: 100%;
   /* Добавьте это */
+}
+.main-header__title {
+  text-align: center;
+  font-size: 45px;
+  font-weight: 400;
+  text-transform: uppercase;
+  font-family: "Lora", serif;
+  margin-bottom: 50px;
+}
+.main-header__text {
+  text-align: center;
+  font-family: "Lora", serif;
+  font-size: 45px;
+  font-weight: 400;
+  text-transform: uppercase;
 }
 @media (hover: hover) {
   .link:hover {
