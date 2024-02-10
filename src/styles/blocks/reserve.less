@@ -9,20 +9,60 @@
 
 	&__checks {
 		grid-area: checks;
+		display: flex;
+		flex-direction: column;
+		align-items: flex-start;
+		text-align: right;
 	}
 
 	&__order {
 		grid-area: order;
+		display: flex;
+		flex-direction: column;
+		justify-content: space-around;
 	}
 
 	&__scheme {
 		grid-area: scheme;
+		display: flex;
+		flex-direction: column;
+		align-items: flex-end;
+
 	}
 
-	&__order {
-		grid-area: order;
+	&__legend {
+		grid-area: legend;
+		display: flex;
+		flex-direction: column;
+		align-items: flex-end;
+		text-align: right;
 	}
 
+	&__check {
+		margin-bottom: 10px;
+
+		&:last-child {
+			margin-bottom: 0;
+		}
+	}
+
+	&__scheme-container {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		min-width: 780px;
+	}
+
+	&__scheme-title {
+		margin: 0 0 40px;
+		padding: 6px 56px;
+		background-color: black;
+		color: white;
+		font-weight: 600;
+		font-size: 16px;
+		line-height: 22px;
+
+	}
 
 	&__scheme-wrapper {
 		position: relative;
@@ -32,7 +72,6 @@
 			content: "";
 			display: block;
 			width: 100%;
-			padding-top: 51.15384%;
 		}
 	}
 
@@ -46,10 +85,19 @@
 }
 
 .reserve {
+	&__tickets-list {
+		margin-bottom: 25px;
+	}
+
+	&____section-title {
+		margin-bottom: 20px;
+	}
+
 	&__tickets {
 		display: flex;
 		justify-content: space-between;
 		align-items: baseline;
+		margin-bottom: 15px;
 	}
 
 	&__qty {
@@ -66,7 +114,21 @@
 		}
 	}
 
+	&__submit {
+		background-color: @red;
+		color: white;
+		border: none;
+
+		&:hover {
+			background-color: @red_dark;
+		}
+	}
+
 	&__total {
+		margin-bottom: 53px;
+		display: flex;
+		justify-content: center;
+
 		&::before {
 			content: attr(data-caption);
 			margin-right: 30px;
@@ -78,4 +140,113 @@
 			font-size: 0.95em;
 		}
 	}
+
+	&__section-title {
+		margin-bottom: 20px;
+		font-weight: 700;
+		font-size: 18px;
+		line-height: 25px;
+
+		&--mb30 {
+			margin-bottom: 30px;
+		}
+	}
+
+	&__price {
+		display: flex;
+		flex-direction: column;
+		align-items: flex-end;
+		margin: 0 0 35px;
+	}
+
+	&__price-item {
+		position: relative;
+		min-height: 24px;
+		margin-bottom: 15px;
+		padding-left: 34px;
+		padding-top: 2px;
+		font-size: 14px;
+		line-height: 19px;
+
+		&::before {
+			content: "";
+			display: block;
+			position: absolute;
+			left: 0;
+			top: 0;
+			width: 24px;
+			height: 24px;
+			background-color: black;
+		}
+
+		&::after {
+			content: attr(data-caption);
+		}
+
+		&--red {
+			&::before {
+
+				background-color: @red;
+			}
+		}
+	}
+
+
+	&__notation {
+		display: flex;
+		flex-direction: column;
+		align-items: flex-end;
+	}
+
+	&__note {
+		position: relative;
+		box-sizing: border-box;
+		min-height: 24px;
+		margin-bottom: 13px;
+		padding-left: 54px;
+		padding-top: 2px;
+		font-size: 14px;
+		line-height: 19px;
+
+		&--free {
+
+			&::before,
+			&::after {
+				content: '';
+				box-sizing: border-box;
+				display: block;
+				position: absolute;
+				left: 0;
+				top: 0;
+				width: 24px;
+				height: 24px;
+				border: 1px solid black;
+				border-radius: 50%;
+			}
+
+			&::after {
+				left: 12px;
+				border-color: @red;
+
+
+			}
+		}
+
+		&--booked {
+			&::before {
+				content: '';
+				box-sizing: border-box;
+				display: block;
+				position: absolute;
+				left: 6px;
+				top: 0;
+				width: 24px;
+				height: 24px;
+				border-radius: 50%;
+				background-color: @gray_dark;
+			}
+		}
+	}
+
+
 }
