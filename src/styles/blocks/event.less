@@ -7,6 +7,7 @@
 
 	&__header {
 		.container;
+		margin-bottom: 80px;
 	}
 
 	&__about {
@@ -63,5 +64,46 @@
 				background: linear-gradient(90deg, #1C1B1B 0%, rgba(255, 255, 255, 0) 82.86%);
 			}
 		}
+	}
+
+	&__time {
+		font-size: 30px;
+		font-style: normal;
+		font-weight: 300;
+		line-height: 36px;
+
+		&[datetime] {
+			&::after {
+				content: attr(data-caption);
+				margin-left: 10px;
+				font-weight: 700;
+				font-size: 16px;
+				line-height: 19px;
+
+			}
+		}
+	}
+
+	&__info-text {
+		display: block;
+		font-size: 16px;
+		line-height: 19px;
+		font-weight: 700;
+	}
+
+	&__picture {
+		display: block;
+		width: 497px;
+		margin: 0 50px;
+	}
+
+	&__image {
+		display: block;
+		width: 100%;
+	}
+
+	&__content {
+		max-width: 830px;
+		margin-bottom: 80px;
 	}
 }

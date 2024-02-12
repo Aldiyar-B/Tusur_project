@@ -1,6 +1,6 @@
 .reserve {
 	display: grid;
-	gap: 65px 11%;
+	gap: 65px 71%;
 	grid-template-columns: 405px calc(89% - 405px);
 	grid-template-areas:
 		"checks scheme"
@@ -57,7 +57,7 @@
 		margin: 0 0 40px;
 		padding: 6px 56px;
 		background-color: black;
-		color: white;
+		color: white !important;
 		font-weight: 600;
 		font-size: 16px;
 		line-height: 22px;
@@ -248,21 +248,19 @@
 		}
 	}
 
+	// &__checks {
+	// 	grid-area: checks;
+	// }
 
-}
+	// &__order {
+	// 	grid-area: order;
+	// }
 
-.reserve__checks {
-	grid-area: checks;
-}
+	// &__scheme {
+	// 	grid-area: scheme;
+	// }
 
-.reserve__order {
-	grid-area: order;
-}
-
-.reserve__scheme {
-	grid-area: scheme;
-}
-
-.reserve__scheme {
-	grid-area: scheme;
+	// &__legend {
+	// 	grid-area: legend;
+	// }
 }

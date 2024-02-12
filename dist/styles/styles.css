@@ -1002,7 +1002,7 @@ textarea {
 }
 .reserve {
   display: grid;
-  gap: 65px 11%;
+  gap: 65px 71%;
   grid-template-columns: 405px calc(89% - 405px);
   grid-template-areas: "checks scheme" "order legend";
   width: 100%;
@@ -1083,7 +1083,7 @@ textarea {
   margin: 0 0 40px;
   padding: 6px 56px;
   background-color: black;
-  color: white;
+  color: white !important;
   font-weight: 600;
   font-size: 16px;
   line-height: 22px;
@@ -1257,18 +1257,6 @@ textarea {
   border-radius: 50%;
   background-color: #bfbfbf;
 }
-.reserve__checks {
-  grid-area: checks;
-}
-.reserve__order {
-  grid-area: order;
-}
-.reserve__scheme {
-  grid-area: scheme;
-}
-.reserve__scheme {
-  grid-area: scheme;
-}
 .events {
   padding: 140px 0 100px;
 }
@@ -1314,6 +1302,7 @@ textarea {
   margin-right: auto;
   padding-left: 40px;
   padding-right: 40px;
+  margin-bottom: 80px;
 }
 .event__about {
   display: -webkit-box;
@@ -1351,11 +1340,64 @@ textarea {
 .event__info::before,
 .event__info::after {
   content: '';
+  position: absolute;
   display: block;
   width: 140px;
   max-width: 100%;
   height: 1px;
-  background-image: ;
+  background: -webkit-gradient(linear, right top, left top, from(#1C1B1B), color-stop(82.86%, rgba(255, 255, 255, 0)));
+  background: linear-gradient(270deg, #1C1B1B 0%, rgba(255, 255, 255, 0) 82.86%);
+}
+.event__info::before {
+  top: 0;
+}
+.event__info::after {
+  bottom: 0;
+}
+.event__info:last-child {
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  text-align: left;
+}
+.event__info:last-child::before,
+.event__info:last-child::after {
+  left: 0;
+  right: auto;
+  background: -webkit-gradient(linear, left top, right top, from(#1C1B1B), color-stop(82.86%, rgba(255, 255, 255, 0)));
+  background: linear-gradient(90deg, #1C1B1B 0%, rgba(255, 255, 255, 0) 82.86%);
+}
+.event__time {
+  font-size: 30px;
+  font-style: normal;
+  font-weight: 300;
+  line-height: 36px;
+}
+.event__time[datetime]::after {
+  content: attr(data-caption);
+  margin-left: 10px;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 19px;
+}
+.event__info-text {
+  display: block;
+  font-size: 16px;
+  line-height: 19px;
+  font-weight: 700;
+}
+.event__picture {
+  display: block;
+  width: 497px;
+  margin: 0 50px;
+}
+.event__image {
+  display: block;
+  width: 100%;
+}
+.event__content {
+  max-width: 830px;
+  margin-bottom: 80px;
 }
 .contacts__container {
   -webkit-box-sizing: border-box;
