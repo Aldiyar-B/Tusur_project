@@ -8,7 +8,7 @@
 	padding: 90px 50px 90px;
 	overflow-y: auto;
 	z-index: 110;
-	//display: none;
+	display: none;
 	//	background-color: @gray;
 
 	@supports (backdrop-filter: blur(25px)) {
@@ -57,6 +57,13 @@
 		align-self: flex-end;
 	}
 
+	&__sticky-close {
+		position: sticky;
+		top: 0;
+		width: 0;
+		align-self: flex-end;
+	}
+
 	&__sticky-btn {
 		position: absolute;
 		right: 0;
@@ -76,7 +83,7 @@
 
 		&:hover {
 			@media(hover:hover) {
-				background-color: @red_dark;
+				background-color: #ac2e20;
 			}
 
 		}
@@ -86,4 +93,26 @@
 			margin: auto;
 		}
 	}
+}
+
+.show-event-popup {
+	body {
+		overflow: hidden;
+	}
+
+	#js-eventPP {
+		display: flex;
+	}
+}
+
+.x-btn {
+	&__icon {
+		pointer-events: none;
+	}
+}
+
+.form__btn--text:hover {
+	background-color: #ac2e20;
+	color: white;
+	border: none;
 }

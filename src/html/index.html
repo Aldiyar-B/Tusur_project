@@ -27,8 +27,8 @@
 			<!-- <section class="offers home__offers"></section> -->
 			@@include('blocks/about.html', {class: 'home__about'})
 			<!-- <section class="upcoming home__upcoming"></section> -->
-			@@include('events.html', {"class": "events"})
-
+			<!-- @@include('events.html', {"class": "events"}) -->
+			@@include('blocks/upcoming.html');
 			@@include('blocks/blog-listing.html', {"class": "home__listing"})
 			<!-- <section class="listing home__listing"></section> -->
 			@@include('blocks/contacts.html',{class:'home__contacts'})
@@ -37,7 +37,9 @@
 	</main>
 	@@include('blocks/page-footer.html')
 
-	<!-- @@include('blocks/event-pp.html') -->
+	@@include('blocks/event-pp.html')
+	<script src="scripts/swiper.min.js"></script>
+	<script src="/scripts/main.min.js"></script>
 </body>
 
 </html>
