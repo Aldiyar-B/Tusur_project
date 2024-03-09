@@ -156,6 +156,10 @@ textarea {
   display: -ms-flexbox;
   display: flex;
 }
+.map {
+  overflow: visible !important;
+  margin-right: 400px;
+}
 .body {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
@@ -1010,7 +1014,7 @@ button.swiper-pagination-bullet {
   opacity: 1;
 }
 .swiper-pagination-bullet.swiper-pagination-bullet-active {
-  background-color: #1f1t1t;
+  background-color: black;
   background-clip: padding-box;
 }
 .swiper-pagination-horizontal.swiper-pagination-bullets .swiper-pagination-bullet {
@@ -2376,6 +2380,10 @@ button.swiper-pagination-bullet {
       -ms-flex-direction: column;
           flex-direction: column;
   gap: 67px;
+}
+.contacts__map {
+  height: 500px;
+  width: 752px;
 }
 .pp {
   position: fixed;
