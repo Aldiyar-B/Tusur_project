@@ -1053,6 +1053,43 @@ button.swiper-pagination-bullet {
 .swiper--3s .swiper-slide .event-card__title {
   cursor: pointer;
 }
+.upcoming__wrapper {
+  margin-bottom: 75px;
+}
+.swiper-arrow-prev,
+.swiper-arrow-next {
+  background: none;
+  border: none;
+  cursor: pointer;
+  /* Рекомендуется добавить для лучшего UX */
+}
+.arrow--left {
+  -webkit-transform: rotate(0.5turn);
+      -ms-transform: rotate(0.5turn);
+          transform: rotate(0.5turn);
+}
+.swiper-arrow-prev:hover {
+  color: #bc3324;
+}
+.swiper-arrow-next:hover {
+  color: #bc3324;
+}
+.for__link {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+}
+.upcoming__link {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+}
 .content {
   color: black;
   font-family: "Open Sans", sans-serif;
