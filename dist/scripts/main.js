@@ -288,5 +288,10 @@
 	}
 
 
-
+	const jsSelectric = $(".js-selectric");
+	if (jsSelectric.length) {
+		jsSelectric.selectric({
+			nativeOnMobile: false
+		});
+	}
 })();
