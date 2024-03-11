@@ -287,11 +287,16 @@
 		});
 	}
 
+	// selectric (for select)
 	const jsSelectric = $(".js-selectric");
 	if (jsSelectric.length) {
 		jsSelectric.selectric({
 			nativeOnMobile: false
 		});
 	}
-
+	// for phone
+	const mobileMask = $('.js-mobileMask');
+	if (mobileMask.length) {
+		mobileMask.mask('+7 (000) 000 00 00', { placeholder: "+7 (___) ___ __ __" });
+	}
 })();
