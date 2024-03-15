@@ -326,4 +326,13 @@
 			pickerInit($(this));
 		});
 	}
+
+	const eventForm = $('#js-eventForm');
+	if (eventForm.length) {
+		eventForm.validate({
+			errorElement: "span"
+		});
+	}
+
+
 })();

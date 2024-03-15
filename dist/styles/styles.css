@@ -469,6 +469,12 @@ textarea {
   overflow: visible !important;
   margin-right: 400px;
 }
+.field label.error,
+.field span.error {
+  display: block;
+  margin: 5px 0 0;
+  color: #bc3324;
+}
 .body {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;

@@ -13,7 +13,7 @@
 				Заполните форму <br>
 				и мы подберем площадку
 			</h3>
-			<div class="pp__form form">
+			<form class="pp__form form" id="js-eventForm">
 				<div class="form__list">
 					<div class="form__field form__field--w50  field ">
 						<h6 class="field__title">
@@ -106,13 +106,17 @@
 					<label class="form__field form__field--mb30 label">
 						<span class="field__label field__label--textarea">Есть пожелания? Напишите нам:</span>
 						<textarea class="field__textarea" name="wish" id="" cols="30" rows="10"> </textarea>
+
 					</label>
 					<label class="form__check form__check--mb40 check">
-						<input type="checkbox" class="check__input" required name="agree">
+						<input type="checkbox" class="check__input" name="agree">
+						<!-- <input type="checkbox" class="check__input" required name="agree"> -->
+						<!-- required сверху не работает корректно -->
 						<span class="check__mark"></span>
 						<span class="check__label">Я соглашаюсь с пользовательским соглашением и с политикой
 							использования персональных
-							данных</span>
+							данных
+						</span>
 					</label>
 					<div class="form__btns  ">
 						<button type="submit" class="form__btn form__btn--text  btn"> Отправить</button>
@@ -122,4 +126,8 @@
 					</div>
 				</div>
 
-			</div>
+			</form>
+
+		</div>
+	</div>
+</div>
