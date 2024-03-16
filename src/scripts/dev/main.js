@@ -327,10 +327,40 @@
 		});
 	}
 
+	//for validation
 	const eventForm = $('#js-eventForm');
 	if (eventForm.length) {
 		eventForm.validate({
 			errorElement: "span"
+		});
+	}
+
+	// for form in footer
+	const subscribeForm = $("#js-subscribeForm");
+	if (subscribeForm.length) {
+		const subscribeAction = subscribeForm.attr("action");
+		const subscribeEmail = subscribeForm.find("#js-subscribeEmail");
+		subscribeForm.validate({
+			errorElement: "span",
+			submitHandler: function (form, event) {
+				event.preventDefault();
+				fetch(subscribeAction, {
+					method: "POST",
+					body: {
+						email: subscribeEmail.val()
+					},
+				})
+					.then(() => {
+
+						subscribeEmail.val("");
+						subscribeEmail.blur();
+						toastr.success("Вы успешно подписались на рассылку новостей", "");
+
+					})
+					.catch(() => {
+						toastr.error("Попробуйте еще раз", "Ошибка");
+					});
+			}
 		});
 	}
 
