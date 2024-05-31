@@ -121,9 +121,6 @@
 }
 
 
-.upcoming__wrapper {
-	margin-bottom: 75px;
-}
 
 .swiper-arrow-prev,
 .swiper-arrow-next {
@@ -137,6 +134,9 @@
 	transform: rotate(0.5turn);
 }
 
+.upcoming__wrapper {
+	margin-bottom: 75px;
+}
 
 .swiper-arrow-prev:hover {
 	color: @red;
@@ -156,4 +156,56 @@
 	display: flex;
 	justify-content: flex-end;
 
+}
+
+.upcoming {
+	&__wrapper {
+		background-image: url(../assets/images/rectangle.png);
+		width: 100%;
+		height: 1236px;
+		margin-bottom: 46px;
+
+		@media @bw1340 {
+			height: 1170px;
+			margin-bottom: 71px;
+		}
+
+		@media @bw768 {
+			height: 1040px;
+			margin-bottom: 71px;
+		}
+
+		@media @bw320 {
+			height: 970px;
+			margin-bottom: 41px;
+			margin-top: 41px;
+		}
+
+	}
+
+	&__container {
+		.container();
+		padding-top: 110px;
+
+		@media @bw1340 {
+			padding-top: 108px;
+		}
+
+		@media @bw768 {
+			padding-top: 90px;
+		}
+
+		@media @bw320 {
+			padding-top: 51px;
+		}
+	}
+
+	&__link {
+		margin-top: 15px;
+		justify-content: end;
+
+		@media @bw960 {
+			margin-top: 33px;
+		}
+	}
 }
