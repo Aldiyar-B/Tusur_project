@@ -156,3 +156,9 @@
 }
 .card-event__picture-img {
 }
+.svg-contacts {
+	display: -webkit-box;
+}
+.svg-contacts__img {
+	display: -webkit-box;
+}
