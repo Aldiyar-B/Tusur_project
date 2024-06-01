@@ -475,6 +475,15 @@ textarea {
   margin: 5px 0 0;
   color: #bc3324;
 }
+.highlight-red {
+  fill: #bc3324;
+}
+.highlight-black {
+  fill: #1f1e1e;
+}
+.highlight-white {
+  fill: #ffffff;
+}
 .body {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
@@ -3744,6 +3753,12 @@ button.swiper-pagination-bullet {
   font-weight: 700;
   line-height: 120%;
   text-align: right;
+}
+.scene__table.active[data-check='table_1'] {
+  fill: #BC3324;
+}
+.scene__table.active[data-check='table_2'] {
+  fill: #1F1E1E;
 }
 .events {
   padding-top: 140px 0 100px;

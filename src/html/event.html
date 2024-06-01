@@ -69,6 +69,69 @@
 		</article>
 	</main>
 	@@include('blocks/page-footer.html')
+	<script src="scripts/jquery-3.7.1.min.js"></script>
+	<script src="scripts/jquery.validate.min.js"></script>
+	<script src="scripts/jquery.validate-init.js"></script>
+	<script src="scripts/toastr.min.js"></script>
+	<script type="text/javascript">
+		Command: toastr["success"]("Вы все сделали правильно", "Успех")
+
+		toastr.options = {
+			"closeButton": false,
+			"debug": false,
+			"newestOnTop": false,
+			"progressBar": false,
+			"positionClass": "toast-top-right",
+			"preventDuplicates": false,
+			"onclick": null,
+			"showDuration": "300",
+			"hideDuration": "1000",
+			"timeOut": "5000",
+			"extendedTimeOut": "1000",
+			"showEasing": "swing",
+			"hideEasing": "linear",
+			"showMethod": "fadeIn",
+			"hideMethod": "fadeOut"
+		}
+		document.addEventListener('DOMContentLoaded', () => {
+			const checkboxes = document.querySelectorAll('.check__input');
+			const tables = document.querySelectorAll('.scene__table');
+
+			const toggleTableHighlight = (checkbox, tableElement) => {
+				const tableNumber = tableElement.querySelector('.scene__table-num');
+				if (checkbox.checked) {
+					if (checkbox.closest('.check--red')) {
+						tableElement.classList.add('highlight-red');
+					} else {
+						tableElement.classList.add('highlight-black');
+					}
+					tableNumber.classList.add('highlight-white');
+				} else {
+					tableElement.classList.remove('highlight-red', 'highlight-black');
+					tableNumber.classList.remove('highlight-white');
+				}
+			};
+
+			checkboxes.forEach(checkbox => {
+				checkbox.addEventListener('change', (event) => {
+					const tableId = event.target.getAttribute('data-table');
+					const tableElement = document.getElementById(tableId);
+					toggleTableHighlight(event.target, tableElement);
+				});
+			});
+
+			tables.forEach(table => {
+				table.addEventListener('click', () => {
+					const tableId = table.getAttribute('id');
+					const checkbox = document.querySelector(`.check__input[data-table="${tableId}"]`);
+					checkbox.checked = !checkbox.checked;
+					toggleTableHighlight(checkbox, table);
+				});
+			});
+		});
+
+
+	</script>
 </body>
 
 </html>
