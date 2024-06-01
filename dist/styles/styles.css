@@ -492,7 +492,6 @@ textarea {
   font-style: normal;
   line-height: 1.375;
   overflow-x: hidden;
-  padding-top: 147px;
 }
 /*======================================
   Selectric v1.13.0
@@ -3325,10 +3324,15 @@ button.swiper-pagination-bullet {
 .breadcrumbs__link:last-child::after {
   display: none;
 }
+.body {
+  margin: 0;
+  background-color: #bfbfbf;
+  font-family: "Open Sans", sans-serif;
+}
 .table {
   width: 100%;
   border-collapse: collapse;
-  color: #1F1E1E;
+  color: #1f1e1e;
   text-align: center;
 }
 .table__tr:nth-child(2n-1) {
@@ -3339,7 +3343,7 @@ button.swiper-pagination-bullet {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   padding: 10px;
-  border-right: 1px solid #BFBFBF;
+  border-right: 1px solid #bfbfbf;
   text-transform: uppercase;
 }
 .table__th:first-child,
@@ -3366,8 +3370,8 @@ button.swiper-pagination-bullet {
           box-sizing: border-box;
   height: 50px;
   padding: 10px 10px 10px 0;
-  border-top: 1px solid #BFBFBF;
-  border-bottom: 1px solid #BFBFBF;
+  border-top: 1px solid #bfbfbf;
+  border-bottom: 1px solid #bfbfbf;
   font-weight: 400;
   font-size: 18px;
   line-height: 25px;
@@ -3378,7 +3382,7 @@ button.swiper-pagination-bullet {
           box-sizing: border-box;
   height: 50px;
   padding: 10px;
-  border: 1px solid #BFBFBF;
+  border: 1px solid #bfbfbf;
   font-weight: 600;
   font-size: 16px;
   line-height: 22px;
@@ -3387,16 +3391,16 @@ button.swiper-pagination-bullet {
   border-right: none;
   padding-right: 0;
 }
-.table__ok {
+.table .ok {
   display: block;
   position: relative;
   width: 26px;
   height: 26px;
   margin: auto;
   border-radius: 50%;
-  background-color: #1F1E1E;
+  background-color: #1f1e1e;
 }
-.table__ok::after {
+.table .ok::after {
   content: "";
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
@@ -3431,6 +3435,7 @@ button.swiper-pagination-bullet {
   width: 100%;
   text-decoration: none;
   color: black;
+  font-size: 20px;
 }
 .event-card__link:active .event-card__title {
   color: #bc3324;
@@ -3461,19 +3466,17 @@ button.swiper-pagination-bullet {
       -ms-flex-direction: column;
           flex-direction: column;
 }
-.listing__link {
-  padding-top: 40px;
-  margin-left: auto;
-}
-.listing__article-list {
+.listing__events-list {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
-  margin: 0 -30px -120px;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
-.listing__article-card {
+.listing__event-card {
   width: calc(33.3333% - 60px);
   margin: 0 30px 120px;
 }
@@ -3743,12 +3746,13 @@ button.swiper-pagination-bullet {
   text-align: right;
 }
 .events {
-  padding: 140px 0 100px;
+  padding-top: 140px 0 100px;
 }
 .events__listing {
+  margin-top: 200px;
   margin-bottom: 100px;
 }
-.event__services {
+.events__services {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   width: 100%;
@@ -3758,11 +3762,40 @@ button.swiper-pagination-bullet {
   padding-right: 40px;
   margin-bottom: 50px;
 }
-.event__services-description {
+.events__services-description {
   max-width: 870px;
-  margin: 0 0 60px;
+  margin: 0 0 60px 0;
   font-size: 16px;
   line-height: 22px;
+}
+.events__title {
+  -ms-flex-item-align: center;
+      align-self: center;
+}
+.events__link_down {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-decoration: none;
+  font-weight: 600;
+  position: relative;
+}
+.listing__events-list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
 }
 .event__container {
   -webkit-box-sizing: border-box;
@@ -3927,6 +3960,51 @@ button.swiper-pagination-bullet {
   display: flex;
   width: 752px;
   padding: 1%;
+}
+.info__container {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  width: 100%;
+  max-width: 1414px;
+  margin: 0 auto;
+  padding-left: 40px;
+  padding-right: 40px;
+}
+.info__items {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  gap: 67px;
+  margin-bottom: 90px;
+}
+.info__img {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 110px;
+  height: 110px;
+  background-color: #1f1e1e;
+  color: #bc3324;
+}
+.info__title {
+  margin: 0 0 10;
+  font-weight: 600;
+  font-size: 20px;
+  line-height: normal;
+  color: #1f1e1e;
+}
+.info__info {
+  width: 260px;
 }
 .pp {
   position: fixed;
@@ -4793,9 +4871,6 @@ button.swiper-pagination-bullet {
   .width_623 {
     max-width: 604px;
   }
-  .body {
-    padding-top: 111px;
-  }
   .swiper--3s .swiper-slide {
     width: calc(33.3333% + 13.3333px);
     min-width: 320px;
@@ -4806,6 +4881,9 @@ button.swiper-pagination-bullet {
   }
   .section-title {
     max-width: 604px;
+  }
+  .body {
+    height: 111px;
   }
   .page-header {
     height: 111px;
@@ -4867,12 +4945,18 @@ button.swiper-pagination-bullet {
     padding-left: 30px;
     padding-right: 30px;
   }
+  .listing__event-card {
+    margin: 0 20px 100px;
+  }
   .doit__text {
     font-size: 90px;
   }
-  .event__services {
+  .events__services {
     padding-left: 30px;
     padding-right: 30px;
+  }
+  .events__services {
+    margin-bottom: 40px;
   }
   .event__container {
     padding-left: 30px;
@@ -4885,6 +4969,13 @@ button.swiper-pagination-bullet {
   .contacts__container {
     padding-left: 30px;
     padding-right: 30px;
+  }
+  .info__container {
+    padding-left: 30px;
+    padding-right: 30px;
+  }
+  .info__items {
+    gap: 29px;
   }
   .offers__container {
     padding-left: 30px;
@@ -5087,6 +5178,12 @@ button.swiper-pagination-bullet {
   .contacts-item__title {
     font-size: 18px;
   }
+  .events__listing {
+    margin-top: 150px;
+  }
+  .events__services-description {
+    margin-bottom: 50px;
+  }
   .contacts__wrapper {
     -webkit-box-orient: vertical;
     -webkit-box-direction: reverse;
@@ -5107,6 +5204,19 @@ button.swiper-pagination-bullet {
   .contacts__map {
     height: 464px;
     width: 100%;
+  }
+  .info__items {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    margin-top: 99px;
+    margin-right: 0;
+    gap: 50px 100px;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
   }
   .article-card {
     -webkit-box-orient: vertical;
@@ -5157,9 +5267,6 @@ button.swiper-pagination-bullet {
     padding-left: 20px;
     padding-right: 20px;
   }
-  .body {
-    padding-top: 70px;
-  }
   .swiper-footer {
     margin: 60px auto 0;
   }
@@ -5194,6 +5301,9 @@ button.swiper-pagination-bullet {
   .breadcrumbs {
     display: none;
   }
+  .body {
+    height: 70px;
+  }
   .table {
     display: block;
   }
@@ -5207,8 +5317,6 @@ button.swiper-pagination-bullet {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    -ms-flex-wrap: wrap;
-        flex-wrap: wrap;
   }
   .table__tr {
     display: -webkit-box;
@@ -5248,18 +5356,18 @@ button.swiper-pagination-bullet {
   .table__footer-th:nth-child(2) {
     padding-left: 10px;
   }
-  .table__th:nth-child(2n-1),
-  .table__footer-th:nth-child(2n-1) {
+  .table__th:nth-child(2n - 1),
+  .table__footer-th:nth-child(2n - 1) {
     background-color: rgba(31, 30, 30, 0.03);
   }
   .table__th {
     font-size: 14px;
   }
   .table__footer-th {
-    font-size: 14px;
-    line-height: 1.35;
     color: #6C6C6C;
+    font-size: 14px;
     font-weight: 300;
+    line-height: 1.35;
   }
   .table__body-th {
     display: block;
@@ -5278,6 +5386,9 @@ button.swiper-pagination-bullet {
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
     width: 33.3333%;
     height: auto;
     min-height: 50px;
@@ -5287,7 +5398,7 @@ button.swiper-pagination-bullet {
   .table__td:last-child {
     padding-right: 10px;
   }
-  .table__td:nth-child(2n-1) {
+  .table__td:nth-child(2n - 1) {
     background-color: rgba(31, 30, 30, 0.03);
   }
   .table__footer-tr {
@@ -5300,10 +5411,17 @@ button.swiper-pagination-bullet {
     padding-left: 20px;
     padding-right: 20px;
   }
+  .listing__event-card {
+    width: calc(53.3333% - 60px);
+    margin: 0 15px 80px;
+  }
   .doit__text {
     font-size: 80px;
   }
-  .event__services {
+  .events__listing {
+    margin-bottom: 104px;
+  }
+  .events__services {
     padding-left: 20px;
     padding-right: 20px;
   }
@@ -5322,6 +5440,13 @@ button.swiper-pagination-bullet {
   .contacts__container {
     padding-left: 20px;
     padding-right: 20px;
+  }
+  .info__container {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+  .info__items {
+    margin-bottom: 40px;
   }
   .offers__container {
     padding-left: 20px;
@@ -5461,6 +5586,10 @@ button.swiper-pagination-bullet {
             justify-content: start;
     gap: 42px;
   }
+  .info__items {
+    margin-top: 90px;
+    gap: 40px 0px;
+  }
   .article-card__description {
     min-width: auto;
   }
@@ -5485,6 +5614,10 @@ button.swiper-pagination-bullet {
   }
   .selectric-wrapper::before {
     right: 17px;
+  }
+  .listing__event-card {
+    width: calc(127.3333% - 60px);
+    margin: 0 0 60px;
   }
   .article-card + .article-card {
     margin-top: 80px;
@@ -5512,6 +5645,9 @@ button.swiper-pagination-bullet {
 @media (max-width: 449px) {
   .svg-contacts {
     gap: 30px;
+  }
+  .events__services-description {
+    margin-bottom: 30px;
   }
   .page-footer__wrapper {
     -webkit-box-orient: vertical;
@@ -5559,6 +5695,9 @@ button.swiper-pagination-bullet {
   }
   .selectric-items li {
     font-size: 14px;
+  }
+  .events__listing {
+    margin-top: 80px;
   }
   .article-card__info {
     padding: 10px 0 80px;
