@@ -2798,6 +2798,11 @@ button.swiper-pagination-bullet {
           justify-content: center;
   gap: 44px;
   margin-top: 64px;
+  position: absolute;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+      -ms-transform: translateX(-50%);
+          transform: translateX(-50%);
 }
 .svg-contacts__img {
   display: -webkit-box;
@@ -2820,10 +2825,6 @@ button.swiper-pagination-bullet {
 .svg-contacts__img:active {
   color: #a51505;
 }
-.svg-contacts__icon {
-  lor: #1f1e1e;
-  color: #bc3324;
-}
 .btn {
   padding: 15px 40px;
   border: 1px solid black;
@@ -2842,20 +2843,57 @@ button.swiper-pagination-bullet {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  font-size: 16px;
   text-decoration: none;
   height: 0;
   font-weight: 600;
-  color: black;
+  font-size: 16px;
+  color: #1f1e1e;
   -webkit-transition: color 0.2s;
   transition: color 0.2s;
 }
-.link:active {
-  color: red;
+.link--1 {
+  padding-top: 40px;
+  margin-left: auto;
+  font-weight: 600;
+  font-style: normal;
+  line-height: normal;
+  text-decoration: none;
 }
-.link__name,
+.link--1:active {
+  color: #bc3324;
+}
+.link__arrow-1 {
+  padding-bottom: 0;
+}
+.link:active {
+  color: #bc3324;
+}
+.link__name {
+  padding-bottom: 0;
+}
 .link__icon {
-  cursor: pointer;
+  font-weight: 600;
+  font-style: normal;
+  line-height: normal;
+  text-decoration: none;
+  padding-top: 18px;
+  border: 0;
+}
+.link__icon:active {
+  color: #bc3324;
+}
+.link__icon--pd40-ml {
+  padding-top: 40px;
+  margin-left: auto;
+}
+.link__icon--arrow {
+  padding-top: 0;
+  background-color: transparent;
+}
+.link__icon--arrow-left {
+  -webkit-transform: rotate(180deg);
+      -ms-transform: rotate(180deg);
+          transform: rotate(180deg);
 }
 .section-title {
   background: black;
@@ -3308,21 +3346,21 @@ button.swiper-pagination-bullet {
 .breadcrumbs__link {
   display: inline;
   margin-right: 10px;
-  color: black;
-  font-style: 16px;
+  color: #1f1e1e;
+  font-size: 16px;
   line-height: 22px;
   text-decoration: none;
   -webkit-transition: color 0.2s;
   transition: color 0.2s;
 }
 .breadcrumbs__link::after {
-  content: '/';
+  content: "/";
   position: relative;
   left: 4px;
   display: inline-block;
   width: 0;
+  color: #1f1e1e;
   pointer-events: none;
-  color: black;
 }
 .breadcrumbs__link:hover {
   color: #bc3324;
@@ -3424,6 +3462,29 @@ button.swiper-pagination-bullet {
   -webkit-transform: rotate(45deg);
       -ms-transform: rotate(45deg);
           transform: rotate(45deg);
+}
+.upcoming__wrapper {
+  background-image: url(../assets/images/white.png);
+  width: 100%;
+  height: 1236px;
+  margin-bottom: 6px;
+  margin-top: 10px;
+}
+.upcoming__container {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  width: 100%;
+  max-width: 1414px;
+  margin: 0 auto;
+  padding-left: 40px;
+  padding-right: 40px;
+  padding-top: 110px;
+}
+.upcoming__link {
+  margin-top: 15px;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: end;
 }
 .event-card {
   display: -webkit-box;
@@ -4604,7 +4665,7 @@ button.swiper-pagination-bullet {
   font-style: normal;
   font-weight: 400;
   line-height: normal;
-  margin-top: 44px;
+  margin-top: 34px;
 }
 .page-footer__end {
   display: -webkit-box;
@@ -4621,7 +4682,7 @@ button.swiper-pagination-bullet {
   font-style: normal;
   font-weight: 600;
   line-height: normal;
-  margin-top: 56px;
+  margin-top: 86px;
   -webkit-box-orient: horizontal;
   -webkit-box-direction: normal;
       -ms-flex-flow: row;
@@ -4956,6 +5017,20 @@ button.swiper-pagination-bullet {
     padding-left: 30px;
     padding-right: 30px;
   }
+  .breadcrumbs {
+    margin-top: 76px;
+  }
+  .upcoming__wrapper {
+    height: 1170px;
+    margin-bottom: 71px;
+  }
+  .upcoming__container {
+    padding-left: 30px;
+    padding-right: 30px;
+  }
+  .upcoming__container {
+    padding-top: 108px;
+  }
   .listing {
     padding-left: 30px;
     padding-right: 30px;
@@ -5193,6 +5268,9 @@ button.swiper-pagination-bullet {
   .contacts-item__title {
     font-size: 18px;
   }
+  .upcoming__link {
+    margin-top: 33px;
+  }
   .events__listing {
     margin-top: 150px;
   }
@@ -5314,6 +5392,7 @@ button.swiper-pagination-bullet {
     padding-right: 20px;
   }
   .breadcrumbs {
+    margin-top: 40px;
     display: none;
   }
   .body {
@@ -5421,6 +5500,17 @@ button.swiper-pagination-bullet {
     display: -ms-flexbox;
     display: flex;
     border-top: 1px solid #bfbfbf;
+  }
+  .upcoming__wrapper {
+    height: 1040px;
+    margin-bottom: 71px;
+  }
+  .upcoming__container {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+  .upcoming__container {
+    padding-top: 90px;
   }
   .listing {
     padding-left: 20px;
@@ -5630,6 +5720,9 @@ button.swiper-pagination-bullet {
   .selectric-wrapper::before {
     right: 17px;
   }
+  .link--show-more {
+    font-size: 14px;
+  }
   .listing__event-card {
     width: calc(127.3333% - 60px);
     margin: 0 0 60px;
@@ -5750,6 +5843,14 @@ button.swiper-pagination-bullet {
   .contacts-item__title {
     font-size: 14px;
   }
+  .upcoming__wrapper {
+    height: 970px;
+    margin-bottom: 41px;
+    margin-top: 41px;
+  }
+  .upcoming__container {
+    padding-top: 51px;
+  }
   .doit__text {
     font-size: 40px;
   }
@@ -5794,8 +5895,14 @@ button.swiper-pagination-bullet {
   .svg-contacts__img:hover {
     color: #a51505;
   }
+  .link--1:hover {
+    color: #bc3324;
+  }
   .link:hover {
-    color: red;
+    color: #bc3324;
+  }
+  .link__icon:hover {
+    color: #bc3324;
   }
   .contacts-item__info[href]:hover {
     color: #bc3324;
